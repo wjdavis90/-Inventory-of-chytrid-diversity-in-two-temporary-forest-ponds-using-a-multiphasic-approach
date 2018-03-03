@@ -99,3 +99,16 @@ Rarefaction curves were calculated as well. A parameter file listing the alpha d
 `$alpha_rarefaction.py -i ~/filtered_oct_dec_otus.biom -m mapping.txt -t Tree.tre -p alphaparams.txt -o arare/`
 
 ## Beta diversity indices & analyses
+
+`beta_diversity_through_plots.py -i oct_dec_otus_wo_ITX3.biom -m Mapping_ID_wm4_corrected.txt -p beta_params -t Tree.tre -o all_otu_beta_diversity_plots`
+
+`beta_diversity_through_plots.py -i chytrid_oct_dec_otus.biom -m Mapping_ID_wm4_corrected.txt -p beta_params -t Tree.tre -o chytrid_otu_beta_diversity_plots`
+
+`beta_diversity.py -i oct_dec_otus_wo_ITX3.biom -m unweighted_unifrac,weighted_unifrac,bray_curtis,bray_curtis_faith -t Tree.tre -o all_beta`
+
+`beta_diversity.py -i chytrid_oct_dec_otus.biom -m unweighted_unifrac,weighted_unifrac,bray_curtis,bray_curtis_faith -t Tree.tre -o chytrid_beta`
+
+`compare_categories.py --method adonis -i ./all_beta/bray_curtis_oct_dec_otus_wo_ITX3.txt -m Mapping_ID_wm4_corrected.txt -c DOB -o all_adonis_bray_curtis_DOB`
+
+`compare_categories.py --method anosim -i ./all_beta/bray_curtis_oct_dec_otus_wo_ITX3.txt -m Mapping_ID_wm4_corrected.txt -c DOB -o all_anosim_bray_curtis_DOB`
+
