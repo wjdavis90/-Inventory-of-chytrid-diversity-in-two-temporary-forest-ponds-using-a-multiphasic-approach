@@ -115,6 +115,3 @@ Models were built and tested as above using lme4.
 `>anova(TVP.PD.null, TVP.PD.interaction)`
 
 Results were stored as text files using the capture.output function.
-
-## Beta diversity
-
